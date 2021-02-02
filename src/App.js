@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Survey from './components/Survey';
+import survey_questions from './survey';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Survey source={survey_questions} />
+      <br />
+
+      {/* {
+        survey_questions.map(
+          (question, index) => <Question source={question} key={index} index={index} />
+        )
+      } */}
     </div>
   );
 }
