@@ -3,7 +3,7 @@ import React from 'react';
 function Option(props) {
 
     function onClicked() {
-        props.onClicked(props.id);
+        props.changeSelection(props.id);
     }
 
     return <div className='OptionsHolder'>

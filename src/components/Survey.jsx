@@ -1,36 +1,47 @@
 import React, { useState } from 'react';
 import Question from './Question';
+import NavButton from './NavButton';
 
-var answers = [];
 function Survey(props) {
-    var [index, setIndex] = useState(0);
+
+    var [questionIndex, setQuestionIndex] = useState(0);
     var questions = props.source;
+    const [selectedOptions, modifySelectedOptions] = useState(new Array(questions.length).fill(null));
 
     function getNextQuestion() {
-        if (index < questions.length - 1) {
-            setIndex(++index);
+        if (questionIndex < questions.length - 1) {
+            setQuestionIndex(++questionIndex);
         } else {
-            console.log(answers);
         }
     }
 
     function getPreviousQuestion() {
-        if (index > 0) {
-            setIndex(--index);
+        if (questionIndex > 0) {
+            setQuestionIndex(--questionIndex);
         }
     }
 
-    function markAnswer(selectedAnswer, id) {
-        answers[id] = selectedAnswer;
+    function submitSurvey() {
+        console.log(selectedOptions);
+        //TODO: Complete the function
+    }
+
+    function markAnswer(selectedOptionID) {
+        modifySelectedOptions(
+            function () {
+                selectedOptions[questionIndex] = selectedOptionID;
+                return selectedOptions;
+            }
+        )
     }
 
     return <div>
-        <Question source={questions[index]} index={index} markAnswer={markAnswer} />
+        <Question source={questions[questionIndex]} questionIndex={questionIndex} markAnswer={markAnswer} />
 
-        <button onClick={getNextQuestion}>Next</button>
-        <button onClick={getPreviousQuestion}>Previous</button>
+        <NavButton onClick={getPreviousQuestion} title='Previous' />
+        <NavButton onClick={getNextQuestion} title='Next' />
         {
-            (index === questions.length - 1) && <button onClick={getNextQuestion}>Submit</button>
+            (questionIndex === questions.length - 1) && <NavButton onClick={submitSurvey} title='Submit' />
         }
     </div>;
 }

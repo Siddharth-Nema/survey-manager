@@ -1,19 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import Option from './Option';
 
 function Question(props) {
 
-    function changeSelection(answer) {
-        props.markAnswer(answer, props.index);
+    function clearSelection() {
+        props.markAnswer(null);
+    }
+
+    document.onclick = function () {
+        if (document.activeElement.tagName !== 'BUTTON') {
+            clearSelection();
+        }
+    }
+
+    function changeSelection(selectedOptionID) {
+        props.markAnswer(selectedOptionID);
     }
 
     return <div className='Question'>
-        <h2>Question {props.index + 1}</h2>
+        <h2>Question {props.questionIndex + 1}</h2>
         <h3>{props.source.title}</h3>
         {
             props.source.options.map(
                 (option, index) => <Option source={option} key={index} id={index}
-                    onClicked={changeSelection} />
+                    changeSelection={changeSelection} />
             )
         }
     </div>;

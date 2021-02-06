@@ -8,13 +8,6 @@ function App() {
     <div className="App">
       <Header />
       <Survey source={survey_questions} />
-      <br />
-
-      {/* {
-        survey_questions.map(
-          (question, index) => <Question source={question} key={index} index={index} />
-        )
-      } */}
     </div>
   );
 }

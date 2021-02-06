@@ -30,6 +30,8 @@ code {
 
 /*Question*/
 .Question {
+  padding: 2em;
+  width: 50%;
   display: inline-block;
 }
 
@@ -37,9 +39,15 @@ code {
   text-align: left;
 }
 
+.Question h3 {
+  text-align: left;
+  padding: 0.5em 0;
+}
+
 /*Option*/
 .OptionsHolder {
   text-align: left;
+  margin: 5px ;
 }
 
 .Option {
@@ -49,4 +57,10 @@ code {
 .Option:focus {
   background-color: black;
   color: white;
+}
+
+/*NavButton*/
+.NavButton {
+  display: inline-block;
+  margin: 2.5px;
 }
