@@ -1,4 +1,4 @@
-const survey_questions = [
+const CodingSurvey = [
     {
         title: 'What is your favourite Web Framework?',
         options: [
@@ -45,4 +45,4 @@ const survey_questions = [
     },
 ];
 
-export default survey_questions;
+export default CodingSurvey;

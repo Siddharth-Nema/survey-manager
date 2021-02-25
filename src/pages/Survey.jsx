@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import Question from './Question';
-import NavButton from './NavButton';
+import '../css/App.css'
+import { useHistory } from 'react-router-dom';
+import Question from '../components/SurveyPage/Question';
+import NavButton from '../components/SurveyPage/NavButton';
 
 function Survey(props) {
 
+    var history = useHistory();  //holds the routing history and has funtions to redirect to other routes
+
     var [questionIndex, setQuestionIndex] = useState(0);
-    var questions = props.source;
+    var questions = props.location.state.questions;
     const [selectedOptions, modifySelectedOptions] = useState(new Array(questions.length).fill(null));
 
     function getNextQuestion() {
@@ -22,9 +26,11 @@ function Survey(props) {
     }
 
     function submitSurvey() {
-        console.log(selectedOptions);
+        console.log(history);
+        history.push('/submission');
         //TODO: Complete the function
     }
+
 
     function markAnswer(selectedOptionID) {
         modifySelectedOptions(
