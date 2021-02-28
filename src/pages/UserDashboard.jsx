@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import '../css/UserDashboard.css';
-import Profile from "../components/DashboardPage/Profile";
-import Settings from "../components/DashboardPage/Settings";
-import Home from "../components/DashboardPage/HomePage/Home";
+import Profile from "../components/DashboardPage/DashboardViews/Profile";
+import Settings from "../components/DashboardPage/DashboardViews/Settings";
+import Home from "../components/DashboardPage/DashboardViews/Home/Home";
 import SidebarMenu from "../components/DashboardPage/SidebarMenu";
 
 function UserDashboard() {
+
     return <div className='UserDashboard'>
         <SidebarMenu />
         <div className='DashboardView'>

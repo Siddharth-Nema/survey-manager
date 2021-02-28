@@ -1,3 +1,4 @@
+import "./css/App.css";
 import Header from './components/Header';
 import Survey from './pages/Survey';
 import SubmissionPage from "./pages/SubmissionPage";

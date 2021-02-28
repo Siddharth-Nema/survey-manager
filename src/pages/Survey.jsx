@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/App.css'
+import '../css/SurveyPage.css'
 import { useHistory } from 'react-router-dom';
 import Question from '../components/SurveyPage/Question';
 import NavButton from '../components/SurveyPage/NavButton';
@@ -7,15 +7,15 @@ import NavButton from '../components/SurveyPage/NavButton';
 function Survey(props) {
 
     var history = useHistory();  //holds the routing history and has funtions to redirect to other routes
+    var propsPassedFromLink = props.location.state;
 
     var [questionIndex, setQuestionIndex] = useState(0);
-    var questions = props.location.state.questions;
+    var questions = propsPassedFromLink.questions;
     const [selectedOptions, modifySelectedOptions] = useState(new Array(questions.length).fill(null));
 
     function getNextQuestion() {
         if (questionIndex < questions.length - 1) {
             setQuestionIndex(++questionIndex);
-        } else {
         }
     }
 

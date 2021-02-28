@@ -1,67 +1,18 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.App {
-  text-align: center;
-}
-
-/*                    COMPONENTS                */
-
-/* Header */
-.Header {
-  background-color: cadetblue;
-  margin: 0;
-}
-
-.Header h1 {
-  margin: 0;
-  padding: 12px;
-}
-
-/*Question*/
-.Question {
-  padding: 2em;
-  width: 50%;
-  display: inline-block;
-}
-
-.Question h2 {
-  text-align: left;
-}
-
-.Question h3 {
-  text-align: left;
-  padding: 0.5em 0;
-}
-
-/*Option*/
-.OptionsHolder {
-  text-align: left;
-  margin: 5px ;
-}
-
-.Option {
-  width: 50%;
-}
-
-.Option:focus {
-  background-color: black;
-  color: white;
-}
-
-/*NavButton*/
-.NavButton {
-  display: inline-block;
-  margin: 2.5px;
-}
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  

@@ -1,6 +1,6 @@
 import SurveyTile from './SurveyTile';
-import CodingSurvey from "../../../../SampleSurveys/CodingSurvey";
-import PokemonSurvey from "../../../../SampleSurveys/PokemonSurvey";
+import CodingSurvey from "../../../../../SampleSurveys/CodingSurvey";
+import PokemonSurvey from "../../../../../SampleSurveys/PokemonSurvey";
 
 function SurveysList() {
     return <div className='SurveysList'>
