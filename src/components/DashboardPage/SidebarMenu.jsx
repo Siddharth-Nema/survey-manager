@@ -6,6 +6,7 @@ function SidebarMenu() {
         <Link className='SidebarMenu-Links' to='/dashboard'>Home</Link>
         <Link className='SidebarMenu-Links' to='/dashboard/profile'>Profile</Link>
         <Link className='SidebarMenu-Links' to='/dashboard/settings'>Settings</Link>
+        <Link className='SidebarMenu-Links' to='/create-survey'>+  Create</Link>
     </div>
 }
 

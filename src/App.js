@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Survey from './pages/Survey';
 import SubmissionPage from "./pages/SubmissionPage";
 import UserDashboard from './pages/UserDashboard';
+import SurveyCreator from './pages/SurveyCreator';
 import { Route, BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 
 function App() {
@@ -21,6 +22,11 @@ function App() {
           path='/survey'
           exact
           component={Survey}
+        />
+
+        <Route
+          path='/create-survey'
+          component={SurveyCreator}
         />
 
         <Route
