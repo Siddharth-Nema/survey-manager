@@ -27,6 +27,7 @@ function Survey(props) {
   }
 
   function submitSurvey() {
+    console.log(selectedOptions);
     history.push("/submission");
     //TODO: Complete the function
   }

@@ -5,7 +5,6 @@ function QuestionCreator(props) {
 
   function handleTitleChange(event) {
     props.question.title = event.target.value;
-    console.log(props.question.title);
   }
 
   function handleChangeInNoOfOptions(event) {

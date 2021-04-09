@@ -2,7 +2,7 @@ import SurveysList from "./HomeComponents/SurveysList";
 import { getSurveys } from "../../../../service/BackendService";
 import { useEffect, useState } from "react";
 
-function Home(props) {
+function Home() {
   const [surveys, setSurveys] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,6 @@ function Home(props) {
       });
   }, []);
 
-  var propsPassedFromLink = props.location.state; //Data from survey creator
   return (
     <div className="Home">
       <h1>Surveys you might like</h1>
