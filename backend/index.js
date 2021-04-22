@@ -63,6 +63,8 @@ var surveys = [
   },
 ];
 
+var responses = [];
+
 app.get("/", function (req, res) {
   res.send("Server is working");
 });
@@ -78,6 +80,14 @@ app.post("/api/postSurvey", function (req, res) {
 
   surveys.push(data);
   res.json("User added successfully");
+});
+
+app.post("/api/postResponse", function (req, res) {
+  var data = req.body;
+  responses.push(data);
+  console.log(responses);
+
+  res.json("Response stored successfully");
 });
 
 app.listen(8080, function () {

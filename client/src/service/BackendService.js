@@ -14,3 +14,13 @@ export async function storeSurvey(survey) {
 
   return await response.json();
 }
+
+export async function storeResponse(response) {
+  return await fetch("/api/postResponse", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(response),
+  });
+}

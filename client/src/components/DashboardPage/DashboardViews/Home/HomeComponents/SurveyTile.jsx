@@ -8,6 +8,7 @@ function SurveyTile(props) {
         to={{
           pathname: "/survey",
           state: {
+            title: props.title,
             questions: props.questions,
           },
         }}
