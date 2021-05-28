@@ -10,17 +10,19 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Router>
-        <Redirect from="/" to="/dashboard" />
+      <div className="body">
+        <Router>
+          <Redirect from="/" to="/dashboard" />
 
-        <Route path="/dashboard" component={UserDashboard} />
+          <Route path="/dashboard" component={UserDashboard} />
 
-        <Route path="/survey" exact component={Survey} />
+          <Route path="/survey" exact component={Survey} />
 
-        <Route path="/create-survey" component={SurveyCreator} />
+          <Route path="/create-survey" component={SurveyCreator} />
 
-        <Route path="/submission" component={SubmissionPage} />
-      </Router>
+          <Route path="/submission" component={SubmissionPage} />
+        </Router>
+      </div>
     </div>
   );
 }

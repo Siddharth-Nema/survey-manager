@@ -1,64 +1,81 @@
 .UserDashboard {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /************************COMPONENTS************************/
 .SidebarMenu {
-    background-color:grey;
-    width: 10em;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  background-color: rgba(7, 0, 31, 0.836);
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .SidebarMenu-Links {
-    text-decoration: none;
-    color: white;
-    border: 1px solid darkgrey;
-    height: 2.5em;
-    margin: 0;
+  text-decoration: none;
+  color: white;
+  height: 2.5em;
+  margin: 5px;
+  padding: 24px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.SidebarMenu-Links:hover {
+  color: white;
+  background-color: rgba(7, 0, 31, 0.932);
 }
 
 .DashboardView {
-    margin-left: 10em;
+  margin-left: 200px;
 }
 
 /************************VIEWS************************/
 .Home {
-    padding: 10px;
-    text-align: left;
+  padding: 2em 4em;
+  text-align: left;
 }
 
 /*************VIEW-SPECIFIC COMPONENTS*****************/
 
 /*****HOME*****/
+.HomePageHeading {
+  font-size: 36px;
+}
+
 .SurveysList {
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
+  overflow: hidden;
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
 }
 
 .SurveyTile {
-    margin: 0 1em;
-    padding: 1em;
-    background-color: rgb(233, 233, 41);
-    width: 17.5em;
-    height: 10em;
-    text-align: left;
-    position: relative;
-}
-
-.SurveyTile:hover {
-    background-color: rgb(211, 211, 39);
+  margin: 1em 1em;
+  padding: 1em;
+  width: 17.5em;
+  height: 10em;
+  text-align: left;
+  position: relative;
 }
 
 .OpenSurveyButton {
-    position: absolute;
-    right: 1em;
-    bottom: 1em;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  border: 1px solid rgba(7, 0, 31, 0.932);
+}
+
+.OpenSurveyButton:hover {
+  background-color: rgba(7, 0, 31, 0.932);
+  color: white;
+}
+
+span {
+  padding: 15px;
 }

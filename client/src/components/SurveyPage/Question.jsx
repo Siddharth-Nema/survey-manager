@@ -7,11 +7,11 @@ function Question(props) {
         props.markAnswer(null);
     }
 
-    document.onclick = function () {
+    /*document.onclick = function () {
         if (document.activeElement.tagName !== 'BUTTON') {
             clearSelection();
         }
-    }
+    }*/
 
     function changeSelection(selectedOptionID) {
         props.markAnswer(selectedOptionID);

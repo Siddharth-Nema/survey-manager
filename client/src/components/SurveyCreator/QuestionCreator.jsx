@@ -1,4 +1,5 @@
 import { useState } from "react";
+import OptionCreator from "../../components/SurveyCreator/OptionCreator";
 
 function QuestionCreator(props) {
   var [noOfOptions, setNoOfOptions] = useState(1);
@@ -15,13 +16,7 @@ function QuestionCreator(props) {
     var optionsList = [];
     for (var i = 0; i < number; i++) {
       optionsList.push(
-        <input
-          id={i}
-          key={i}
-          type="text"
-          className="optionField"
-          onChange={handleOptionChange}
-        />
+        <OptionCreator key={i} index={i} onChange={handleOptionChange} />
       );
     }
     return optionsList;
@@ -34,20 +29,29 @@ function QuestionCreator(props) {
   return (
     <div className="QuestionCreator">
       <form>
-        <label htmlFor="title">Title</label>
-        <input type="text" onChange={handleTitleChange} />
-
-        <select
-          name="noOfOptions"
-          id="noOfOption"
-          value={noOfOptions}
-          onChange={handleChangeInNoOfOptions}
-        >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
+        <div className="questionTitle">
+          <label htmlFor="questionTitle" className="form-label">
+            Question
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="questionTitle"
+            onChange={handleTitleChange}
+          ></input>
+        </div>
+        <div className="Options">
+          <label htmlFor="noOfOptions">No of Options:</label>
+          <input
+            id="noOfOptions"
+            type="number"
+            className="input-group"
+            min="1"
+            max="15"
+            value={noOfOptions}
+            onChange={handleChangeInNoOfOptions}
+          ></input>
+        </div>
 
         {getOptionCreators(noOfOptions)}
       </form>

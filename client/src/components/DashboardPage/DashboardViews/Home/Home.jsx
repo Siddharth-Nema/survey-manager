@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <div className="Home">
-      <h1>Surveys you might like</h1>
+      <h1 className="HomePageHeading">Surveys you might like</h1>
       <SurveysList surveys={surveys} />
     </div>
   );

@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import QuestionCreator from "../components/SurveyCreator/QuestionCreator";
 import "../css/SurveyCreator.css";
 import { storeSurvey } from "../service/BackendService";
+import { FaPlus } from "react-icons/fa";
 
 function SurveyCreator() {
   var history = useHistory();
@@ -42,14 +43,35 @@ function SurveyCreator() {
   return (
     <div className="SurveyCreator">
       <h1>You are at Survey Creator page</h1>
-      <input type="text" onChange={handleTitleChange} />
+
+      <div className="surveyTitle">
+        <label htmlFor="surveyTitle" className="form-label">
+          Title
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          id="surveyTitle"
+          onChange={handleTitleChange}
+        ></input>
+      </div>
+
       {questionList.map((question, index) => (
         <QuestionCreator key={index} question={question} />
       ))}
-      <button className="addQuestionCreatorButton" onClick={addQuestionCreator}>
-        +
+      <button
+        className="btn btn-info addQuestionCreatorButton"
+        onClick={addQuestionCreator}
+      >
+        <FaPlus />
+        <span>Add</span>
       </button>
-      <button onClick={submitSurvey}>Submit</button>
+      <button
+        className="submitButton btn btn-outline-success"
+        onClick={submitSurvey}
+      >
+        Submit
+      </button>
     </div>
   );
 }

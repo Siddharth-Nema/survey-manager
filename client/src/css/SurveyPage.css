@@ -1,15 +1,9 @@
 /**************COMPONENTS**************/
 
 /****Header*****/
-.Header {
-  background-color: cadetblue;
-  margin: 0;
-}
 
-.Header h1 {
-  margin: 0;
-  padding: 12px;
-}
+
+
 
 /******Question*******/
 .Question {
