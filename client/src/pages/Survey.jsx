@@ -10,7 +10,7 @@ import { storeResponse } from "../service/BackendService";
 function Survey(props) {
   var history = useHistory(); //holds the routing history and has funtions to redirect to other routes
   var propsPassedFromLink = props.location.state;
-  //console.log(propsPassedFromLink);
+  console.log(propsPassedFromLink);
 
   var [questionIndex, setQuestionIndex] = useState(0);
   var questions = propsPassedFromLink.questions;
@@ -36,6 +36,7 @@ function Survey(props) {
       title: propsPassedFromLink.title,
       responseID: generateId(),
       answers: selectedOptions,
+      surveyID: propsPassedFromLink.id,
     };
 
     storeResponse(response)

@@ -4,7 +4,7 @@ export async function getSurveys() {
 }
 
 export async function storeSurvey(survey) {
-  const response = await fetch("/api/postSurvey", {
+  const response = await fetch("/api/surveys/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -16,7 +16,7 @@ export async function storeSurvey(survey) {
 }
 
 export async function storeResponse(response) {
-  return await fetch("/api/postResponse", {
+  return await fetch("/api/surveys/postResponse", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

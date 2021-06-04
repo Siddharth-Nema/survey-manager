@@ -4,6 +4,7 @@ import QuestionCreator from "../components/SurveyCreator/QuestionCreator";
 import "../css/SurveyCreator.css";
 import { storeSurvey } from "../service/BackendService";
 import { FaPlus } from "react-icons/fa";
+import { v4 as generateId } from "uuid";
 
 function SurveyCreator() {
   var history = useHistory();
@@ -22,6 +23,7 @@ function SurveyCreator() {
 
   function submitSurvey() {
     var createdSurvey = {
+      _id: generateId(),
       title: title,
       questions: questionList,
     };

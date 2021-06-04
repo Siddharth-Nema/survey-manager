@@ -11,6 +11,7 @@ function SurveyTile(props) {
             state: {
               title: props.title,
               questions: props.questions,
+              id: props.id,
             },
           }}
         >
