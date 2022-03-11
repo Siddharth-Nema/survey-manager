@@ -4,6 +4,8 @@ import Survey from "./pages/Survey";
 import SubmissionPage from "./pages/SubmissionPage";
 import UserDashboard from "./pages/UserDashboard";
 import SurveyCreator from "./pages/SurveyCreator";
+import SurveyConsole from "./pages/SurveyConsole";
+import SurveyResult from "./pages/SurveyResult";
 import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
 
 function App() {
@@ -16,9 +18,13 @@ function App() {
 
           <Route path="/dashboard" component={UserDashboard} />
 
+          <Route path="/survey-console" component={SurveyConsole} />
+
           <Route path="/survey" exact component={Survey} />
 
           <Route path="/create-survey" component={SurveyCreator} />
+
+          <Route path="/survey-result" component={SurveyResult} />
 
           <Route path="/submission" component={SubmissionPage} />
         </Router>

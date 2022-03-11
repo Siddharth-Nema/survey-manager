@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const users = require("./users");
 
 const surveys = express.Router();
 
@@ -42,6 +43,7 @@ surveys.post("/", function (req, res) {
     if (err) {
       console.log(err);
     } else {
+      users.addSurveyID(data.id);
       console.log("Survey saved successfully");
     }
   });
@@ -60,5 +62,42 @@ surveys.post("/postResponse", function (req, res) {
 
   res.json("Response stored successfully");
 });
+
+surveys.get("/getSurvey", function (req, res) {
+  console.log(req.query.id);
+  Survey.findById(req.query.id, function (err, survey) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(survey);
+    }
+  });
+});
+
+surveys.get("/generateResults", function(req, res) {
+  console.log(req.query.id + " - ID");
+  Survey.findById(req.query.id, function (err, foundSurvey) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("here");
+      res.json(generateResult(foundSurvey));
+    }
+  });
+})
+
+function generateResult(survey) {
+  var results = [];
+  survey.questions.forEach((question, index) => {
+    var result = new Array(question.options.length).fill(0);
+
+    survey.responses.forEach((response) => {
+      result[response[index]] += 1;
+    });
+    results.push(result);
+  });
+  console.log(results)
+  return results;
+}
 
 module.exports = surveys;

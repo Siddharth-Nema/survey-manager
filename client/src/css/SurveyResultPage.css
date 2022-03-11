@@ -1,0 +1,17 @@
+
+.QuestionResult {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5em;
+    margin: 2.5em 200px;
+    text-align: left;
+}
+
+.Choices {
+    margin: 0 2em;
+    display: inline;
+}
+
+.QuestionTitle {
+    margin: 0.5em;
+}

@@ -14,12 +14,14 @@ mongoose.connect("mongodb://localhost:27017/" + dbName, {
 
 mongoose.connection.on("error", function () {
   console.log("Could Not connect");
+  process.exit(1);
 });
 mongoose.connection.on("open", function () {
   console.log("Successfully Connected");
 });
 
 app.use("/api/surveys", require("./routes/surveys"));
+app.use("/api/users", require("./routes/users").users);
 
 app.get("/", function (req, res) {
   res.send("Server is working");

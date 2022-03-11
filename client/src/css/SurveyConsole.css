@@ -1,0 +1,25 @@
+.SurveyConsole {
+  text-align: left;
+  padding: 3em 5em;
+}
+
+p {
+  margin: 0;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.addSurveybtn {
+  float: right;
+  margin-top: 3em;
+  background-color: rgba(7, 0, 31, 0.932);
+  color: white;
+}
+
+.addSurveybtn:hover {
+  color: white;
+  background-color: rgba(17, 0, 71, 0.932);
+}

@@ -13,8 +13,8 @@ function SidebarMenu() {
       <Link className="SidebarMenu-Links btn" to="/dashboard/settings">
         <FaIcons.FaCog /> <span>Settings</span>
       </Link>
-      <Link className="SidebarMenu-Links btn" to="/create-survey">
-        <FaIcons.FaPlus /> <span>Create Survey</span>
+      <Link className="SidebarMenu-Links btn" to="/survey-console">
+        <FaIcons.FaChartLine /> <span>Manage Surveys</span>
       </Link>
     </div>
   );
